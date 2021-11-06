@@ -25,15 +25,25 @@ export default class Buyrutmalar extends React.Component{
             this.setState({[e.target.name]:e.target.value})
         }
         const onAdd = () =>{
-            let newUser = {
-                id:this.state.products.length + 1,
-                title:this.state.title,
-                short_title:this.state.short_title,
-                cost:this.state.cost,
-                add_title:this.state.add_title,
+            if(
+                this.state.title.length !=0 &&
+                this.state.short_title.length !=0 &&
+                this.state.cost.length !=0 &&
+                this.state.add_title.length !=0 
+                ) {
+
+                let newUser = {
+                    id:this.state.products.length + 1,
+                    title:this.state.title,
+                    short_title:this.state.short_title,
+                    cost:this.state.cost,
+                    add_title:this.state.add_title,
+                }
+                console.log(newUser);
+                this.setState({products:[...this.state.products, newUser]})
+            }else{
+                alert('fill in the blank')
             }
-            console.log(newUser);
-            this.setState({products:[...this.state.products, newUser]})
         }
         return(
            <div>
