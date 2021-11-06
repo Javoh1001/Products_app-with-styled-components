@@ -5,8 +5,8 @@ export const products = [
     {
         id:1,
         title:'Lavash mini',
-        cost:'18000',
         short_title:'Lavash',
+        cost:'18000',
         add_title:'Chizburger',
         // Edit:Edit,
         // Delete:Delete,
